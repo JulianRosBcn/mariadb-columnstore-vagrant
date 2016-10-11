@@ -17,8 +17,8 @@ You need the following things to make this work:
 
 ## Installing
 
-1. Install Vagrant and VirtualBox into your OS of choice, if you are using Linux you will likely need to install the libvirt plugin for Vagrant.
-2. Get the ColumnStore RPMs and put them in the `columnstore` subdirectory of this tree
+1. Install Vagrant and VirtualBox into your OS of choice, if you are using Linux and are using the repository version of Vagrant you may need to install the libvirt plugin for Vagrant (typically called vagrant-libvirt).
+2. Get the ColumnStore CentOS 7 RPMs and put them in the `columnstore` subdirectory of this tree
 3. Run `vagrant up` (this step may take some time)
 
 You should now have a VM running with ColumnStore installed
