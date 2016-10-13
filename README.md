@@ -19,7 +19,8 @@ You need the following things to make this work:
 
 1. Install Vagrant and VirtualBox into your OS of choice, if you are using Linux and are using the repository version of Vagrant you may need to install the libvirt plugin for Vagrant (typically called vagrant-libvirt).
 2. Get the ColumnStore CentOS 7 RPMs and put them in the `columnstore` subdirectory of this tree
-3. Run `vagrant up` (this step may take some time)
+3. Get dbt3.tar.gz from https://www.dropbox.com/s/ljx19r3mgbw7umh/dbt3.tar.gz and put it in the `dbt3` subdirectory of this tree
+4. Run `vagrant up` (this step may take some time)
 
 You should now have a VM running with ColumnStore installed
 
