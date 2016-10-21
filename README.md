@@ -19,24 +19,28 @@ You need the following things to make this work:
 ## Installing
 
 1. Install Vagrant and VirtualBox into your OS of choice, if you are using Linux and are using the repository version of Vagrant you may need to install the libvirt plugin for Vagrant (typically called vagrant-libvirt).
-2. Get the ColumnStore CentOS 7 RPMs and put them in the `columnstore` subdirectory of this tree (*note*: these need be extracted from the `.tar.gz` in this directory)
-3. Get dbt3.tar.gz as indicated in the requirements and put it in the `dbt3` subdirectory of this tree
-4. Run `vagrant up` (this step may take some time)
+2. For windows ensure you have a tool to manage tar.gz files such as 7-zip(http://www.7-zip.org/). In addition an ssh client is needed by vagrant (https://www.mls-software.com/opensshd.html, no need to install the server)
+3. Install the virtualbox guest addditions plugin: 
+'''
+vagrant plugin install vagrant-vbguest
+''''
+
+4 Get the ColumnStore CentOS 7 RPMs and put them in the `columnstore` subdirectory of this tree (*note*: these need be extracted from the `.tar.gz` in this directory)
+5. Get dbt3.tar.gz as indicated in the requirements and put it in the `dbt3` subdirectory of this tree
+6. Run `vagrant up` (this step may take some time)
 
 You should now have a VM running with ColumnStore installed
 
 ## Running ColumnStore
-
-This Vagrant file does not start ColumnStore, to do so please do the following from this git directory:
-
-```bash
+ColumnStore can be accessed either through shell access in the vm:
+```
 vagrant ssh
-/usr/local/mariadb/columnstore/bin/postConfigure
+sudo su -
+mcsadmin
 ```
 
-Select option `1` at the first prompt and then hit enter for the rest of the prompts.
+Alternatively the 3306 port is forwarded to the host and can be connected to using any sql tool on host localhost, port 3306, userid root, no password by default.
 
-You are now inside the virtual machine with ColumnStore running.
 
 ## Other Commands
 
