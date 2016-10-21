@@ -26,7 +26,7 @@ You need the following things to make this work:
 vagrant plugin install vagrant-vbguest
 ```
 
-4 Get the ColumnStore CentOS 7 RPMs and put them in the `columnstore` subdirectory of this tree (*note*: these need be extracted from the `.tar.gz` in this directory)
+4. Get the ColumnStore CentOS 7 RPMs and put them in the `columnstore` subdirectory of this tree (*note*: these need be extracted from the `.tar.gz` in this directory)
 5. Get dbt3.tar.gz as indicated in the requirements and put it in the `dbt3` subdirectory of this tree
 6. Run `vagrant up` (this step may take some time). Note that if you get an error about "libvirt" use `vagrant up --provider=virtualbox` instead.
 
